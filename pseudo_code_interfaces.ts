@@ -5,4 +5,6 @@ interface ExchangeLiquidityAdapter {
     removeLiquidity(pair: string, amount: number): Promise<TransactionReceipt>;
     swapTokens(pair: string, amountIn: number, amountOutMin: number): Promise<TransactionReceipt>;
     getSwapRate(pair: string, amountIn: number): Promise<number>;
+    getLiquidity(pair: string): Promise<number>; 
+    getPoolFees(pair: string): Promise<number>; 
 }
